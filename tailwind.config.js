@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'jit',
+  separator: '_',
   purge: {
     content: [
       './src/**/*.pug',
