@@ -45,7 +45,7 @@ function clear(){
 
 function assets(){
     del(path.build.assets);
-    return gulp.src(path.src.assets)
+    return gulp.src(path.src.assets, {allowEmpty: true})
         .pipe(gulp.dest(path.build.assets));
 }
 
