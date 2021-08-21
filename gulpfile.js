@@ -9,6 +9,7 @@ const gulp = require('gulp'),
     postcss = require('gulp-postcss'),
 
     concat = require('gulp-concat'),
+    include = require('gulp-file-include'),
 
     del = require('del'),
     bs = require('browser-sync'),
@@ -35,6 +36,7 @@ function styles() {
 
 function js(){
   return gulp.src(path.src.js)
+    .pipe(include())
     .pipe(concat('main.js'))
     .pipe(gulp.dest(path.build.js));
 }
